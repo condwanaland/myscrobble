@@ -34,7 +34,7 @@ jobs:
 
       - name: Install curl
         run: sudo apt-get install libcurl4-openssl-dev
-        
+
       - name: Create and populate .Renviron file
         run: |
           echo LASTFM_API_USERNAME="$SCROB_USER_ID" >> ~/.Renviron
@@ -45,6 +45,7 @@ jobs:
         run: |
           install.packages('remotes')
           install.packages('sessioninfo')
+          install.packages('scrobbler')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
