@@ -8,3 +8,5 @@ saveRDS(mydf,
           make.names(Sys.Date()),
           ".Rda")
 )
+
+write.csv(mydf, "scrobbles.csv", row.names = FALSE)
