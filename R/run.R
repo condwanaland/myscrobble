@@ -9,4 +9,4 @@ saveRDS(mydf,
           ".Rda")
 )
 
-write.csv(mydf, "scrobbles.csv", row.names = FALSE)
+write.csv(mydf, "scrobbles/scrobbles.csv", row.names = FALSE)
